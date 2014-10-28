@@ -59,6 +59,13 @@ suite = [
         command = "$DUT a b c d e 2> testtmp; RC=$?; tail -n10 testtmp | diff testfiles/usage.txt -; return $RC",
         stdout = "",
         returnCode = lambda rc : rc != 0
+    ),
+    Test (
+        name = "Overflowing argument",
+        description = "Test with argument that could overflow to -1",
+        command = "$DUT 11111111111111111111",
+        stdout = "",
+        returnCode = lambda rc : rc != 0
     )
 ]
 

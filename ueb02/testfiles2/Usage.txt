@@ -1,0 +1,22 @@
+ueb02 - Image Generator
+Usage:
+
+ueb02 -h:
+    Show this help and exit.    
+ - or -
+ueb02 IMAGE_WIDTH IMAGE_HEIGHT BACKGROUND [OPERATION ...]
+    IMAGE_WIDTH:  Image width
+    IMAGE_HEIGHT: Image height
+    BACKGROUND: Background color
+  OPERATIONs
+    -h HEIGHT SPACE COLOR
+       -> Create repeating horizontal lines with HEIGHT pixels in height, 
+          SPACE pixels space with color COLOR
+    -v WIDTH SPACE COLOR
+       -> Create repeating vertical lines with WIDTH pixels in width, 
+          SPACE pixels space with color COLOR
+    -c HEIGHT HSPACE WIDTH VSPACE COLOR
+       -> Create horizontal and vertical lines with [WIDTH|HEIGTH] pixel 
+          in width/height, [H|V]SPACE pixel space with color COLOR.
+    -o FILE
+       -> Output the current image into FILE

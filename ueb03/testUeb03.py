@@ -282,5 +282,26 @@ suite = [
         command = "$DUT \"-2.1x^2+2.0x^3\" 5.0 0.0 10.0 10 2",
         stderr = StringifiedFile("testfiles/ERR_INVALID_OP_ARG.txt"),
         returnCode = lambda v: v != 0
+    ),
+    Test (
+        name = "Output NullPolynom 1",
+        description = "Nullpolynom was printed correctly",
+        command = "$DUT \"\" 5.0 0.0 10.0 10 c",
+        stdout = StringifiedFile("testfiles/Output_NullPolynom.txt"),
+        returnCode = 0
+    ),
+    Test (
+        name = "Output NullPolynom 2",
+        description = "Nullpolynom was printed correctly",
+        command = "$DUT \"-2.2x^4+3.4x^1+3.0x^2+2.2x^4-3.4x^1-3.0x^2\" 5.0 0.0 10.0 10 c",
+        stdout = StringifiedFile("testfiles/Output_NullPolynom.txt"),
+        returnCode = 0
+    ),
+    Test (
+        name = "Output NullPolynom 3",
+        description = "Nullpolynom was printed correctly",
+        command = "$DUT \"                      \" 5.0 0.0 10.0 10 c",
+        stdout = StringifiedFile("testfiles/Output_NullPolynom.txt"),
+        returnCode = 0
     )
 ]

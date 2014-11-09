@@ -1,0 +1,20 @@
+Error: Don't know what to do.
+
+Usage: ueb03 POLYNOM Y A0 B0 MAXSTEPS DISPLAY
+       -> compute a point x where POLYNOM(x) = Y
+           Y: The value of the POLYNOM at point x
+           A0 / B0: starting values for Regula Falsi
+           MAXSTEPS: maximum number of iterations
+           DISPLAY: a non-empty sequence of
+              x: display x
+              c: display canonical form of input polynom
+              g: display graph
+           f.e. xc to display the computed point x and the canonical form of the polynom
+  or:  ueb03 -h ->  print this information
+
+The `POLYNOM` is a sum of terms of the form ax^b where a is the coefficient and b is the exponent.
+Sequences of whitespace as accepted by the C standard function `sscanf()` are allowed in front of 
+each a (where the sign belongs to the a, i.e. no whitespace is allowed between sign and number) and 
+each b; apart from that no whitespace is permitted.
+e.g.: "4.5x^2+2.0x^1+7.12x^2-9.0098x^0""
+e.g.: " 4.0x^ 2 +2.0x^ 1"
